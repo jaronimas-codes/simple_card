@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --primary-1: hsl(225, 100%, 94%);
+  --primary-2: hsl(245, 75%, 52%);
+  --primary-active: rgba(56, 41, 224, 0.8);
+  --neutral-1: hsl(225, 100%, 98%);
+  --neutral-2: hsl(224, 23%, 55%);
+  --neutral-3: hsl(223, 47%, 23%);
+  --spacer: 1.4rem;
+  --spacer-2: 0.7rem;
+  --border-radius-2: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background-image: url(./images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.card {
+  max-width: 100%;
+  width: 310px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+/* main */
+
+.card__title {
+  font-weight: 900;
+  font-size: 1.3rem;
+  margin-top: var(--spacer);
+}
+
+.card__copy {
+  margin-top: var(--spacer);
+  font-size: 0.9rem;
+  padding: 0 2rem;
+  color: var(--neutral-2);
+  line-height: 1.8;
+}
+
+/* plan */
+
+.card__annual-plan-container {
+  background-color: var(--neutral-1);
+  margin: 0 1.5rem;
+  margin-top: var(--spacer);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--border-radius-2);
+  padding: 0.8rem;
+}
+
+.card__annual-price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: -2rem;
+}
+
+.card__annual-title {
+  font-size: 0.8rem;
+  font-weight: 900;
+  margin-bottom: 0.2rem;
+}
+
+.card__annual-price {
+  font-size: 0.8rem;
+  color: var(--neutral-2);
+}
+
+.card__annual-price-button a {
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: var(--primary-2);
+  transition: color 0.2s ease-in;
+}
+
+.card__annual-price-button:hover a {
+  color: var(--primary-active);
+}
+
+/* footer */
+
+.card__actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  border: none;
+  border-radius: var(--border-radius-2);
+  font-family: inherit;
+  padding: 0.8rem;
+  margin: 0 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.proceed {
+  background: var(--primary-2);
+  color: var(--primary-1);
+  margin-top: var(--spacer);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  transition: background 0.2s ease-in;
+}
+
+.proceed:hover {
+  background: var(--primary-active);
+}
+
+.cancel {
+  background: transparent;
+  color: var(--neutral-2);
+  margin-top: var(--spacer-2);
+  margin-bottom: var(--spacer-2);
+  transition: color 0.2s ease-in;
+}
+
+.cancel:hover {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 1000px){
+  body {
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-size: contain;
+    background-position: 100% 0%;
+  }
+}
